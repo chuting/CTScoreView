@@ -15,8 +15,8 @@
 		00B86F471F078036008C5387 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 00B86F451F078036008C5387 /* LaunchScreen.storyboard */; };
 		00B86F521F078036008C5387 /* CTScoreViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B86F511F078036008C5387 /* CTScoreViewTests.m */; };
 		00B86F5D1F078036008C5387 /* CTScoreViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B86F5C1F078036008C5387 /* CTScoreViewUITests.m */; };
-		00B86F6F1F078148008C5387 /* CTScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00B86F6D1F078148008C5387 /* CTScoreView.m */; };
-		00B86F711F078168008C5387 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00B86F701F078168008C5387 /* Assets.xcassets */; };
+		00D0ADE91F07D40C0096D805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00D0ADE51F07D40C0096D805 /* Assets.xcassets */; };
+		00D0ADEA1F07D40C0096D805 /* CTScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D0ADE81F07D40C0096D805 /* CTScoreView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,9 +53,9 @@
 		00B86F581F078036008C5387 /* CTScoreViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CTScoreViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00B86F5C1F078036008C5387 /* CTScoreViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTScoreViewUITests.m; sourceTree = "<group>"; };
 		00B86F5E1F078036008C5387 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00B86F6C1F078148008C5387 /* CTScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTScoreView.h; sourceTree = "<group>"; };
-		00B86F6D1F078148008C5387 /* CTScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTScoreView.m; sourceTree = "<group>"; };
-		00B86F701F078168008C5387 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00D0ADE51F07D40C0096D805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		00D0ADE71F07D40C0096D805 /* CTScoreView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTScoreView.h; sourceTree = "<group>"; };
+		00D0ADE81F07D40C0096D805 /* CTScoreView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTScoreView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,7 +106,7 @@
 		00B86F361F078036008C5387 /* CTScoreView */ = {
 			isa = PBXGroup;
 			children = (
-				00B86F6A1F078056008C5387 /* CTScoreView */,
+				00D0ADE31F07D40C0096D805 /* CTScoreView */,
 				00B86F3A1F078036008C5387 /* AppDelegate.h */,
 				00B86F3B1F078036008C5387 /* AppDelegate.m */,
 				00B86F3D1F078036008C5387 /* ViewController.h */,
@@ -146,32 +146,30 @@
 			path = CTScoreViewUITests;
 			sourceTree = "<group>";
 		};
-		00B86F6A1F078056008C5387 /* CTScoreView */ = {
+		00D0ADE31F07D40C0096D805 /* CTScoreView */ = {
 			isa = PBXGroup;
 			children = (
-				00B86F6B1F078148008C5387 /* Classes */,
-				00B86F6E1F078148008C5387 /* Assets */,
+				00D0ADE41F07D40C0096D805 /* Assets */,
+				00D0ADE61F07D40C0096D805 /* Classes */,
 			);
 			path = CTScoreView;
 			sourceTree = "<group>";
 		};
-		00B86F6B1F078148008C5387 /* Classes */ = {
+		00D0ADE41F07D40C0096D805 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				00B86F6C1F078148008C5387 /* CTScoreView.h */,
-				00B86F6D1F078148008C5387 /* CTScoreView.m */,
+				00D0ADE51F07D40C0096D805 /* Assets.xcassets */,
 			);
-			name = Classes;
-			path = class;
+			path = Assets;
 			sourceTree = "<group>";
 		};
-		00B86F6E1F078148008C5387 /* Assets */ = {
+		00D0ADE61F07D40C0096D805 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				00B86F701F078168008C5387 /* Assets.xcassets */,
+				00D0ADE71F07D40C0096D805 /* CTScoreView.h */,
+				00D0ADE81F07D40C0096D805 /* CTScoreView.m */,
 			);
-			name = Assets;
-			path = resource;
+			path = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +280,7 @@
 			files = (
 				00B86F471F078036008C5387 /* LaunchScreen.storyboard in Resources */,
 				00B86F441F078036008C5387 /* Assets.xcassets in Resources */,
-				00B86F711F078168008C5387 /* Assets.xcassets in Resources */,
+				00D0ADE91F07D40C0096D805 /* Assets.xcassets in Resources */,
 				00B86F421F078036008C5387 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +308,7 @@
 			files = (
 				00B86F3F1F078036008C5387 /* ViewController.m in Sources */,
 				00B86F3C1F078036008C5387 /* AppDelegate.m in Sources */,
-				00B86F6F1F078148008C5387 /* CTScoreView.m in Sources */,
+				00D0ADEA1F07D40C0096D805 /* CTScoreView.m in Sources */,
 				00B86F391F078036008C5387 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

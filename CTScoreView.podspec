@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CTScoreView'
-  s.version          = '0.1.0'
+  s.version          = '1.0.0'
   s.summary          = '带粒子动画效果的得分控件'
 
 # This description is used to generate tags and improve search results.
@@ -30,8 +30,8 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'CTScoreView/Classes/**/*'
-  s.resources =   ['CTScoreView/Assets/*.xcassets']
+  s.source_files = 'CTScoreView/CTScoreView/Classes/**/*'
+  s.resources =   ['CTScoreView/CTScoreView/Assets/*.xcassets']
   # s.resource_bundles = {
   #   'CTDial' => ['CTScoreView/Assets/*.png']
   # }

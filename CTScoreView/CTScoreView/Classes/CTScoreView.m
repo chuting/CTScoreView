@@ -17,10 +17,10 @@
 @interface CTScoreView ()
 {
     UIView  *backView;
-    UIView  *fireView;
-    UIView  *starView;
-    UIImageView  *redRobbinView;
-    UILabel *lable;
+    UIView  *fireView; //烟花view
+    UIView  *starView; //
+    UIImageView  *redRobbinView;//红丝带
+    UILabel *titleLable;
     CGFloat scale ;
 }
 
@@ -36,17 +36,7 @@
  // Drawing code
  }
  */
-//
-//-(instancetype)init
-//{
-//    self = [super init];
-//    if (!self) {
-//        return nil;
-//    }
-//    [self configUIWithFrame:CGRectZero];
-//    
-//    return self;
-//}
+
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
@@ -61,9 +51,9 @@
     
 }
 
+#pragma mark - UI绘制
 -(void)configUIWithFrame:(CGRect)frame
 {
-    
     backView = [[UIView alloc]initWithFrame:frame];
     [self addSubview:backView];
     
@@ -83,12 +73,11 @@
     
     [backView bringSubviewToFront:fireView];
 
-    lable = [[UILabel alloc] init];
-    lable.textAlignment = NSTextAlignmentCenter;
-    lable.textColor = FontWhiteColor;
-    lable.font = FontTitle;
-    [redRobbinView addSubview:lable];
-    
+    titleLable = [[UILabel alloc] init];
+    titleLable.textAlignment = NSTextAlignmentCenter;
+    titleLable.textColor = FontWhiteColor;
+    titleLable.font = FontTitle;
+    [redRobbinView addSubview:titleLable];
     
     CGFloat x = 0;
     
@@ -117,8 +106,6 @@
     if (!CGRectEqualToRect(frame, CGRectZero)) {
         [self fitSize];
     }
-    
-
 }
 
 -(void)layoutSubviews
@@ -143,8 +130,8 @@
     image = [UIImage imageNamed:@"red_robbin"];
     redRobbinView.frame = CGRectMake(0, CGRectGetMaxY(fireView.frame)-3, CGRectGetWidth(self.frame), image.size.height*scale);
  
-    lable.frame = CGRectMake(0, CGRectGetHeight(redRobbinView.frame)*0.3 , CGRectGetWidth(redRobbinView.frame), CGRectGetHeight(redRobbinView.frame)*0.7);
-    lable.font = [UIFont systemFontOfSize:( (NSInteger)CGRectGetHeight(lable.frame)*0.5)];
+    titleLable.frame = CGRectMake(0, CGRectGetHeight(redRobbinView.frame)*0.3 , CGRectGetWidth(redRobbinView.frame), CGRectGetHeight(redRobbinView.frame)*0.7);
+    titleLable.font = [UIFont systemFontOfSize:( (NSInteger)CGRectGetHeight(titleLable.frame)*0.5)];
     
     
     CGFloat x = 0;
@@ -159,7 +146,6 @@
         x = CGRectGetMaxX(starIMV.frame);
         if (i == 3) {
             starView.frame = CGRectMake( (CGRectGetWidth(redRobbinView.frame) -  CGRectGetMaxX(starIMV.frame)) /2 + CGRectGetMinX(redRobbinView.frame) , CGRectGetMinY(redRobbinView.frame)-CGRectGetHeight(starIMV.frame)/3*2.2, CGRectGetMaxX(starIMV.frame), CGRectGetHeight(starIMV.frame));
-//            starView.backgroundColor = [UIColor grayColor];
         }
         
     }
@@ -171,7 +157,7 @@
 }
 
 
-
+#pragma mark - 粒子动画效果
 - (void)makeFireworksDisplayWithAnimation:(BOOL)animation {
     UIImage *image = [UIImage imageNamed:@"firework_0"];
     for (NSInteger i = 0; i < 2; i++) {
@@ -301,16 +287,15 @@
                     
                 }];
             }
-            
         }else
         {
             yellowStarImageView.hidden = YES;
         }
     }
-    
-    lable.text =self.titleArray[score];
+    titleLable.text =self.titleArray[score];
 }
 
+#pragma mark - 获取标题数组
 -(NSArray *)getTitleArray
 {
     if (titleArray) {
